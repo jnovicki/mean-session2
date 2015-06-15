@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script type="text/javascript" charset="utf-8" src="js/jquery-1.4.2.js">
+
+</script>
+
 	<title>Image Gallery</title>
 </head>
 
@@ -29,6 +34,18 @@
 
 
 		<script type="text/javascript">
+		$(document).ready(function() {
+    	$("#imageGallery a").click(function(){
+        $("#placeholder").attr("src", this.href);
+        $("#description").html(this.title);
+        $("#placeholder").attr("alt", this.title);
+        console.log(this);
+        return false;
+
+    });
+});
+
+
 
 		</script>	
 	</body>
